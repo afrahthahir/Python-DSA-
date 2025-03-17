@@ -25,7 +25,7 @@ class Hashtable:
     #deleting values of a key 
     def __delitem__(self,key):
         hashkey = h.get_hashKey(key)
-        del self.arr[hashkey]
+        self.arr[hashkey] = None
 
     
     
