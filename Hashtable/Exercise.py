@@ -11,23 +11,27 @@ nycWeather = {
     "Jan 10": 30
 }
 
+# What was the average temperature in first week of Jan
+# What was the maximum temperature in first 10 days of Jan
+
+# What was the temperature on Jan 9?
+# What was the temperature on Jan 4?
+
 temperatureJan9 = nycWeather.get("Jan 9")
-print(temperatureJan9)
+print("temperature on Jan 9",temperatureJan9)
 
 temperatureJan4 = nycWeather.get("Jan 4")
-print(temperatureJan4)
+print("temperature on Jan 4",temperatureJan4)
 
-sum = 0
-max = 0
-for key, value in nycWeather.items():
-    sum = sum + value
-    if value > max:
-        max = value
 
-average = sum / len(nycWeather)
-# print(len(nycWeather))
-print(average)
-print(max)
+
+
+weather = [27,31,23,34,37,38,29,30,35,30]
+average = sum(weather[0:7]) / len(weather[0:7])
+maxTemp = max(weather)
+#Using list data structure here because it is the best one to use for this scenario
+print("average temperature in first week of Jan", average)
+print("maximum temperature in first 10 days of Jan", maxTemp)
 
 wordCount = {}
 
